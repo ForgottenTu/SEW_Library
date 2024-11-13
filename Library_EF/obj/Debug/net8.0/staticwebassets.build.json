@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SgV0IEHeHxMmCVpzgPolb3L4Z7xTPOOAcgcx7YheO3I=",
+  "Hash": "wZ3/t4PzfAdR9rBxSjE2wTZWsAmF+gGxd55u0yynnuA=",
   "Source": "Library_EF",
   "BasePath": "_content/Library_EF",
   "Mode": "Default",
@@ -10,17 +10,55 @@
     {
       "Name": "Library_EF\\wwwroot",
       "Source": "Library_EF",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\",
       "BasePath": "_content/Library_EF",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_EF.styles.css",
+      "Identity": "C:\\Users\\Carina\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Carina\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Carina\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Carina\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Carina\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Carina\\.nuget\\packages\\mudblazor\\7.15.0\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_EF.styles.css",
       "SourceId": "Library_EF",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Library_EF",
       "RelativePath": "Library_EF.styles.css",
       "AssetKind": "All",
@@ -33,13 +71,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_EF.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Library_EF.styles.css"
     },
     {
-      "Identity": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_EF.bundle.scp.css",
+      "Identity": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_EF.bundle.scp.css",
       "SourceId": "Library_EF",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Library_EF",
       "RelativePath": "Library_EF.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +90,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_EF.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Library_EF.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\app.css",
       "SourceId": "Library_EF",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\",
       "BasePath": "_content/Library_EF",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "Library_EF",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\",
       "BasePath": "_content/Library_EF",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Library_EF",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\",
       "BasePath": "_content/Library_EF",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\favicon.png",
       "SourceId": "Library_EF",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\wwwroot\\",
       "BasePath": "_content/Library_EF",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

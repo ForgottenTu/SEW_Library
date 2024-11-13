@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj": {}
+    "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj": {
+    "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj",
+        "projectUniqueName": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj",
         "projectName": "Library_DB",
-        "projectPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj",
-        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\obj\\",
+        "projectPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj",
+        "packagesPath": "C:\\Users\\Carina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Carina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
