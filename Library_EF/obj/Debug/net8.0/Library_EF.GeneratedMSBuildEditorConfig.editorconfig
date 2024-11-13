@@ -1,4 +1,7 @@
 is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudIllegalParameters = 
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
@@ -53,3 +56,7 @@ build_metadata.AdditionalFiles.CssScope = b-m7vjpmbwvg
 [C:/Users/julia/RiderProjects/Library_EF/Library_EF/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-xdduapgne2
+
+[C:/Users/julia/RiderProjects/Library_EF/Library_EF/Components/Pages/Books.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb29rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

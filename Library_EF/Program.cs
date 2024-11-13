@@ -16,6 +16,7 @@ builder.Services.AddDbContext<LibraryContext>(options =>
         sqliteOptions.MigrationsAssembly(assembly.FullName);
     });
 });
+builder.Services.AddTransient<>();
 
 var app = builder.Build();
 

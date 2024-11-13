@@ -1,6 +1,6 @@
 ﻿namespace Library_DB;
 
-public class Biography : AItem
+public class Biography : Book
 {
     
 }

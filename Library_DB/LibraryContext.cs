@@ -4,7 +4,7 @@ namespace Library_DB;
 
 public class LibraryContext:DbContext
 {
-    public DbSet<AItem> Items { get; set; }
+    public DbSet<Book> Items { get; set; }
     public DbSet<Person> Persons { get; set; }
     public DbSet<Author> Authors { get; set; }
     public DbSet<Customer> Customers { get; set; }
@@ -23,7 +23,7 @@ public class LibraryContext:DbContext
 
     protected override void OnModelCreating(ModelBuilder model)
     {
-        model.Entity<AItem>().HasDiscriminator<string>("BookType")
+        model.Entity<Book>().HasDiscriminator<string>("BookType")
             .HasValue<Novel>("Novel")
             .HasValue<SciFi>("SciFi")
             .HasValue<Textbook>("Textbook")
@@ -36,8 +36,8 @@ public class LibraryContext:DbContext
         model.Entity<Customer>().ToTable("Customers");
         model.Entity<Librarian>().ToTable("Librarians");
 
-        model.Entity<AItem>().HasOne<BookDetails>().WithOne().HasForeignKey<AItem>(Book => Book.Id);
+        model.Entity<Book>().HasOne<BookDetails>().WithOne().HasForeignKey<Book>(Book => Book.Id);
         
-        model.Entity<AItem>().HasOne<Author>().WithMany();
+        model.Entity<Book>().HasOne<Author>().WithMany();
     }
 }

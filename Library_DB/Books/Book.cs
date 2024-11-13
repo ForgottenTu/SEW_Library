@@ -2,7 +2,7 @@
 
 namespace Library_DB;
 
-public abstract class AItem
+public abstract class Book
 {
     [Key]
     public int Id { get; set; }
