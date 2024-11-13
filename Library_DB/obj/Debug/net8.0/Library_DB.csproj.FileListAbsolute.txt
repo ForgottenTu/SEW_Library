@@ -1,0 +1,14 @@
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\bin\Debug\net8.0\Library_DB.deps.json
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\bin\Debug\net8.0\Library_DB.runtimeconfig.json
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\bin\Debug\net8.0\Library_DB.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\bin\Debug\net8.0\Library_DB.pdb
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.csproj.AssemblyReference.cache
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.AssemblyInfoInputs.cache
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.AssemblyInfo.cs
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.csproj.CoreCompileInputs.cache
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\refint\Library_DB.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.pdb
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.genruntimeconfig.cache
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\ref\Library_DB.dll
