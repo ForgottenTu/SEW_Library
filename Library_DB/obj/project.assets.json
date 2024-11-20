@@ -2563,19 +2563,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amelie\\.nuget\\packages\\": {}
+    "C:\\Users\\Carina\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj",
+      "projectUniqueName": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj",
       "projectName": "Library_DB",
-      "projectPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj",
-      "packagesPath": "C:\\Users\\Amelie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\obj\\",
+      "projectPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj",
+      "packagesPath": "C:\\Users\\Carina\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Amelie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Carina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
