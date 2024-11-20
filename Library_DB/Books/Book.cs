@@ -2,7 +2,7 @@
 
 namespace Library_DB;
 
-public abstract class AItem
+public abstract class Book
 {
     [Key]
     public int Id { get; set; }
@@ -13,5 +13,4 @@ public abstract class AItem
     public int AvailableCopies { get; set; }
     public int AuthorId { get; set; }
     public BookDetails BookDetails { get; set; }
-    
 }

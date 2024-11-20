@@ -1,6 +1,6 @@
 ﻿namespace Library_DB;
 
-public class SciFi : AItem
+public class SciFi : Book
 {
     
 }
