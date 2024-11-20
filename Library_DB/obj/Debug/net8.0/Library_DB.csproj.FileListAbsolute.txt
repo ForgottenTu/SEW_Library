@@ -12,3 +12,4 @@ C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\refint\Libra
 C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.pdb
 C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.genruntimeconfig.cache
 C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\ref\Library_DB.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_DB\obj\Debug\net8.0\Library_DB.sourcelink.json

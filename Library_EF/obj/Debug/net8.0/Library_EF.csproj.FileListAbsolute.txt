@@ -126,3 +126,16 @@ C:\Users\julia\RiderProjects\Library_EF\Library_EF\obj\Debug\net8.0\refint\Libra
 C:\Users\julia\RiderProjects\Library_EF\Library_EF\obj\Debug\net8.0\Library_EF.pdb
 C:\Users\julia\RiderProjects\Library_EF\Library_EF\obj\Debug\net8.0\Library_EF.genruntimeconfig.cache
 C:\Users\julia\RiderProjects\Library_EF\Library_EF\obj\Debug\net8.0\ref\Library_EF.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\bin\Debug\net8.0\MudBlazor.dll
+C:\Users\julia\RiderProjects\Library_EF\Library_EF\obj\Debug\net8.0\Library_EF.sourcelink.json
