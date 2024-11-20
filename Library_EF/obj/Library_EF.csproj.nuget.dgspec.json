@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\Library_EF.csproj": {}
+    "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_EF\\Library_EF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj": {
+    "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj",
+        "projectUniqueName": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj",
         "projectName": "Library_DB",
-        "projectPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj",
-        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\obj\\",
+        "projectPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj",
+        "packagesPath": "C:\\Users\\Amelie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Amelie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,34 +72,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\Library_EF.csproj": {
+    "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_EF\\Library_EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\Library_EF.csproj",
+        "projectUniqueName": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_EF\\Library_EF.csproj",
         "projectName": "Library_EF",
-        "projectPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\Library_EF.csproj",
-        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_EF\\obj\\",
+        "projectPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_EF\\Library_EF.csproj",
+        "packagesPath": "C:\\Users\\Amelie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_EF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Amelie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj": {
-                "projectPath": "C:\\Users\\julia\\RiderProjects\\Library_EF\\Library_DB\\Library_DB.csproj"
+              "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj": {
+                "projectPath": "C:\\Users\\Amelie\\OneDrive - HTL Krems\\4AHIT-AmelieLaptop\\SEW\\GIT\\SEW_Library\\Library_DB\\Library_DB.csproj"
               }
             }
           }
@@ -151,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
