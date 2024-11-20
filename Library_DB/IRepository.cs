@@ -8,7 +8,7 @@ public interface IRepository<TEntity> where TEntity : class
 
     List<TEntity> CreateRange(List<TEntity> list);
 
-    void Updata(TEntity t);
+    void Update(TEntity t);
 
     void UpdateRange(List<TEntity> list);
 
