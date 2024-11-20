@@ -2889,19 +2889,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carina\\.nuget\\packages\\": {}
+    "C:\\Users\\Colin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\Library_EF.csproj",
+      "projectUniqueName": "D:\\schule\\4 a 2024_2025\\sew\\teamproj\\SEW_Library\\Library_EF\\Library_EF.csproj",
       "projectName": "Library_EF",
-      "projectPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\Library_EF.csproj",
-      "packagesPath": "C:\\Users\\Carina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_EF\\obj\\",
+      "projectPath": "D:\\schule\\4 a 2024_2025\\sew\\teamproj\\SEW_Library\\Library_EF\\Library_EF.csproj",
+      "packagesPath": "C:\\Users\\Colin\\.nuget\\packages\\",
+      "outputPath": "D:\\schule\\4 a 2024_2025\\sew\\teamproj\\SEW_Library\\Library_EF\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Carina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Colin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2915,8 +2920,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj": {
-              "projectPath": "C:\\Users\\Carina\\Documents\\4AHIT\\SEW\\SEW_Library\\Library_DB\\Library_DB.csproj"
+            "D:\\schule\\4 a 2024_2025\\sew\\teamproj\\SEW_Library\\Library_DB\\Library_DB.csproj": {
+              "projectPath": "D:\\schule\\4 a 2024_2025\\sew\\teamproj\\SEW_Library\\Library_DB\\Library_DB.csproj"
             }
           }
         }
