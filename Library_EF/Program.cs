@@ -1,4 +1,5 @@
 using System.Reflection;
+using Domain.Interfaces;
 using Library_DB;
 using Library_EF.Components;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,11 @@ builder.Services.AddDbContext<LibraryContext>(options =>
         sqliteOptions.MigrationsAssembly(assembly.FullName);
     });
 });
+
+//register Repositories
 builder.Services.AddTransient<ARepository<Book>>();
+builder.Services.AddTransient<IRepository<Author>, ARepository<Author>>();
+
 
 var app = builder.Build();
 
