@@ -1,7 +1,6 @@
 ﻿@page "/AddBook"
 @using Domain
 @using Domain.Interfaces
-@using Library_DB
 @using Library_DB.Books
 @inject IRepository<Book> BookRepo
 @inject IRepository<BookDetails> DetailRepo
@@ -32,13 +31,13 @@
                     <div>
                         <label class="small text-info" for="type">Type:</label>
                         <InputSelect class="form-control form-control-sm" id="type" @bind-Value="BookType" FormName="create">
-                            <option value="Library_DB.Novel">Novel</option>
-                            <option value="Library_DB.NonFiction">NonFiction</option>
-                            <option value="Library_DB.Mystery">Mystery</option>
-                            <option value="Library_DB.ScienceFiction">ScienceFiction</option>
-                            <option value="Library_DB.Textbook">Textbook</option>
-                            <option value="Library_DB.Fantasy">Fantasy</option>
-                            <option value="Library_DB.Biography">Biography</option>
+                            <option value="Library_DB.Books.Novel">Novel</option>
+                            <option value="Library_DB.Books.NonFiction">NonFiction</option>
+                            <option value="Library_DB.Books.Mystery">Mystery</option>
+                            <option value="Library_DB.Books.SciFi">ScienceFiction</option>
+                            <option value="Library_DB.Books.Textbook">Textbook</option>
+                            <option value="Library_DB.Books.Fantasy">Fantasy</option>
+                            <option value="Library_DB.Books.Biography">Biography</option>
                         </InputSelect>
                     </div>
                     <div>
@@ -69,25 +68,23 @@
 
     private void CreateBook()
     {
-        Type type = null;
+        Type? type = Type.GetType($"{BookType}, Library_DB");
         
-        if (BookType != null)
-            type = Type.GetType(BookType);
-
         if (type != null)
         {
-            object instance = Activator.CreateInstance(type);
+            object? instance = Activator.CreateInstance(type);
 
-            if (instance != null && instance is Book)
+            if (instance is Book bookInstance)
             {
                 Console.WriteLine($"Instance of {BookType} created!");
-                Book = instance as Book;
+                Book = bookInstance;
             }
         }
         else
         {
-            Console.WriteLine($"Class {BookType} not found!");
+            Console.WriteLine($"Class {BookType} not found! Check namespace and assembly.");
         }
+
 
         if (BookDetail != null)
         {
@@ -102,11 +99,11 @@
             BookRepo.Create(Book);
         }
         
-        Book = new();
-        BookDetail = new();
+        Book = new Book();
+        BookDetail = new BookDetails();
     }
     
-    public string BookType { get; set; }
-    public Book Book { get; set; }
-    public BookDetails BookDetail { get; set; }
+    public string? BookType { get; set; }
+    public Book? Book { get; set; }
+    public required BookDetails BookDetail { get; set; }
 }
