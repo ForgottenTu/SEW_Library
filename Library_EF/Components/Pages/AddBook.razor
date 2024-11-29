@@ -1,0 +1,111 @@
+﻿@page "/AddBook"
+@using Domain
+@using Domain.Interfaces
+@using Library_DB
+@inject IRepository<Book> BookRepo
+@inject IRepository<BookDetails> DetailRepo
+@rendermode InteractiveServer
+
+<h3>Add Book</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <EditForm FormName="create" Model="@Book" OnValidSubmit="CreateBook">
+                <DataAnnotationsValidator/>
+                <ValidationSummary/>
+                @if (Book != null && BookDetail != null)
+                {
+                    <div>
+                        <label class="small text-info" for="title">Title:</label>
+                        <InputText class="form-control form-control-sm" id="title" @bind-Value="Book.Title" FormName="create"/>
+                    </div>
+                    <div>
+                        <label class="small text-info" for="publisheddate">Published Date:</label>
+                        <InputDate class="form-control form-control-sm" id="publisheddate" @bind-Value="Book.PublishedDate" FormName="create"/>
+                    </div>
+                    <div>
+                        <label class="small text-info" for="isbn">ISBN:</label>
+                        <InputText class="form-control form-control-sm" id="isbn" @bind-Value="Book.ISBN" FormName="create"/>
+                    </div>
+                    <div>
+                        <label class="small text-info" for="type">Type:</label>
+                        <InputSelect class="form-control form-control-sm" id="type" @bind-Value="BookType" FormName="create">
+                            <option value="Library_DB.Novel">Novel</option>
+                            <option value="Library_DB.NonFiction">NonFiction</option>
+                            <option value="Library_DB.Mystery">Mystery</option>
+                            <option value="Library_DB.ScienceFiction">ScienceFiction</option>
+                            <option value="Library_DB.Textbook">Textbook</option>
+                            <option value="Library_DB.Fantasy">Fantasy</option>
+                            <option value="Library_DB.Biography">Biography</option>
+                        </InputSelect>
+                    </div>
+                    <div>
+                        <label class="small text-info" for="author">Author:</label>
+                        <InputNumber class="form-control form-control-sm" id="author" @bind-Value="Book.AuthorId" FormName="create"/>
+                    </div>
+                    <div>
+                        <label class="small text-info" for="numberofbooks">Number of total Books:</label>
+                        <InputNumber class="form-control form-control-sm" id="numberofbooks" @bind-Value="BookDetail.TotalCopies" FormName="create"/>
+                    </div>
+                }
+                <br/>
+                <button class="btn btn-info btn-sm" type="submit" FormName="create">Create</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Book = new Book();
+        BookDetail = new BookDetails();
+    }
+
+    private void CreateBook()
+    {
+        Type type = null;
+        
+        if (BookType != null)
+            type = Type.GetType(BookType);
+
+        if (type != null)
+        {
+            object instance = Activator.CreateInstance(type);
+
+            if (instance != null && instance is Book)
+            {
+                Console.WriteLine($"Instance of {BookType} created!");
+                Book = instance as Book;
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Class {BookType} not found!");
+        }
+
+        if (BookDetail != null)
+        {
+            BookDetail.AvailableCopies = BookDetail.TotalCopies / 2;
+            BookDetail.BorrowedCopies = BookDetail.TotalCopies - BookDetail.AvailableCopies;
+            DetailRepo.Create(BookDetail);
+        }
+
+        if (Book != null)
+        {
+            Book.BookDetails = BookDetail;
+            BookRepo.Create(Book);
+        }
+        
+        Book = new();
+        BookDetail = new();
+    }
+    
+    public string BookType { get; set; }
+    public Book Book { get; set; }
+    public BookDetails BookDetail { get; set; }
+}

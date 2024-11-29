@@ -2,6 +2,7 @@
 @using Domain.Interfaces
 @using Library_DB
 @inject IRepository<Author> AuthorRepo
+@rendermode InteractiveServer
 
 <h3>Add Author</h3>
 
@@ -42,7 +43,6 @@
     private void Create()
     {
         AuthorRepo.Create(NewAuthor);
-        Console.WriteLine($"Created Author: {NewAuthor.FirstName} {NewAuthor.LastName}");
         NewAuthor = new Author();
     }
 }
