@@ -68,7 +68,7 @@
 
     private void CreateBook()
     {
-        Type? type = Type.GetType($"{BookType}, Library_DB");
+        Type? type = Type.GetType(BookType);
         
         if (type != null)
         {
@@ -82,7 +82,7 @@
         }
         else
         {
-            Console.WriteLine($"Class {BookType} not found! Check namespace and assembly.");
+            Console.WriteLine($"Class {BookType} not found!");
         }
 
 
