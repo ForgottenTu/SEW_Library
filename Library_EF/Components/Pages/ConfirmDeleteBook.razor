@@ -1,0 +1,32 @@
+﻿@page "/ConfirmDeleteBook/{id:int}"
+@using Domain.Interfaces
+@using Library_DB.Books
+@inject IRepository<Book> BookRepo
+@inject NavigationManager NavManager
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+<p>Are you sure you want to delete the book: @_book?.Title</p>
+
+<button class="btn btn-danger" @onclick="DeleteBook">Delete</button>
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Book? _book;
+
+    protected override void OnInitialized()
+    {
+        _book = BookRepo.Read(id);
+        if (_book == null)
+        {
+            NavManager.NavigateTo("/DeleteBook");
+        }
+    }
+    
+    private void DeleteBook()
+    {
+        BookRepo.Delete(_book!);
+        NavManager.NavigateTo("/DeleteBook");
+    }
+
+}

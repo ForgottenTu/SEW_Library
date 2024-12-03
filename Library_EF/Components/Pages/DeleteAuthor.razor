@@ -4,15 +4,16 @@
 @inject IRepository<Author> AuthorRepo
 @rendermode InteractiveServer
 @attribute [StreamRendering]
+@inject NavigationManager NavManager
 
 <h3>DeleteAuthor</h3>
-
 
 <h3>All Authors</h3>
 
 <table class="table">
     <thead>
     <tr>
+        <th>Id</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Date of Birth</th>
@@ -24,12 +25,13 @@
     @foreach (var author in AuthorRepo.ReadAll())
     {
         <tr>
+            <td>@author.Id</td>
             <td>@author.FirstName</td>
             <td>@author.LastName</td>
             <td>@author.DateOfBirth.ToShortDateString()</td>
             <td>@author.Biography</td>
             <td>
-                <button class="btn btn-danger btn-sm" @onclick="() => AuthorRepo.Delete(author)">Delete</button>
+                <button class="btn btn-danger btn-sm" @onclick="() => RedirectToConfirmDelete(author.Id)">Delete</button>
             </td>
         </tr>
     }
@@ -37,5 +39,8 @@
 </table>
 
 @code {
-
+    private void RedirectToConfirmDelete(int authorId)
+    {
+        NavManager.NavigateTo($"/ConfirmDeleteAuthor/{authorId}");
+    }
 }

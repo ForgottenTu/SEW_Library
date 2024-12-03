@@ -1,0 +1,32 @@
+﻿@page "/ConfirmDeleteAuthor/{id:int}"
+@using Domain.Interfaces
+@using Library_DB
+@inject IRepository<Author> AuthorRepo
+@inject NavigationManager NavManager
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+<p>Are you sure you want to delete the Author?: @($"{_author?.FirstName} {_author?.LastName}")</p>
+
+<button class="btn btn-danger" @onclick="DeleteBook">Delete</button>
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Author? _author;
+
+    protected override void OnInitialized()
+    {
+        _author = AuthorRepo.Read(id);
+        if (_author == null)
+        {
+            NavManager.NavigateTo("/AllAuthors");
+        }
+    }
+    
+    private void DeleteBook()
+    {
+        AuthorRepo.Delete(_author!);
+        NavManager.NavigateTo("/AllAuthors");
+    }
+
+}
