@@ -17,15 +17,13 @@ namespace Library_EF.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
 
-            modelBuilder.Entity("Library_DB.AItem", b =>
+            modelBuilder.Entity("Library_DB.Book", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("AvailableCopies")
                         .HasColumnType("INTEGER");
@@ -48,11 +46,65 @@ namespace Library_EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Items");
+                    b.HasIndex("AuthorId");
 
-                    b.HasDiscriminator<string>("BookType").HasValue("AItem");
+                    b.ToTable("Books");
+
+                    b.HasDiscriminator<string>("BookType").HasValue("Book");
 
                     b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Library_DB.BookDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AvailableCopies")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BorrowedCopies")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TotalCopies")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BookDetails");
+                });
+
+            modelBuilder.Entity("Library_DB.BookLoan", b =>
+                {
+                    b.Property<int>("BookId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("BookId");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("PersonId");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("LibrarianId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("LoanDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("ReturnDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("ReturnLibrarianId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("BookId", "PersonId");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("BookLoan");
                 });
 
             modelBuilder.Entity("Library_DB.Person", b =>
@@ -81,42 +133,42 @@ namespace Library_EF.Migrations
 
             modelBuilder.Entity("Library_DB.Fantasy", b =>
                 {
-                    b.HasBaseType("Library_DB.AItem");
+                    b.HasBaseType("Library_DB.Book");
 
                     b.HasDiscriminator().HasValue("Fantasy");
                 });
 
             modelBuilder.Entity("Library_DB.Mystery", b =>
                 {
-                    b.HasBaseType("Library_DB.AItem");
+                    b.HasBaseType("Library_DB.Book");
 
                     b.HasDiscriminator().HasValue("Mystery");
                 });
 
             modelBuilder.Entity("Library_DB.NonFiction", b =>
                 {
-                    b.HasBaseType("Library_DB.AItem");
+                    b.HasBaseType("Library_DB.Book");
 
                     b.HasDiscriminator().HasValue("NonFiction");
                 });
 
             modelBuilder.Entity("Library_DB.Novel", b =>
                 {
-                    b.HasBaseType("Library_DB.AItem");
+                    b.HasBaseType("Library_DB.Book");
 
                     b.HasDiscriminator().HasValue("Novel");
                 });
 
             modelBuilder.Entity("Library_DB.SciFi", b =>
                 {
-                    b.HasBaseType("Library_DB.AItem");
+                    b.HasBaseType("Library_DB.Book");
 
                     b.HasDiscriminator().HasValue("SciFi");
                 });
 
             modelBuilder.Entity("Library_DB.Textbook", b =>
                 {
-                    b.HasBaseType("Library_DB.AItem");
+                    b.HasBaseType("Library_DB.Book");
 
                     b.HasDiscriminator().HasValue("Textbook");
                 });
@@ -151,6 +203,44 @@ namespace Library_EF.Migrations
                         .HasColumnType("TEXT");
 
                     b.ToTable("Librarians", (string)null);
+                });
+
+            modelBuilder.Entity("Library_DB.Book", b =>
+                {
+                    b.HasOne("Library_DB.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Library_DB.BookDetails", "BookDetails")
+                        .WithOne()
+                        .HasForeignKey("Library_DB.Book", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("BookDetails");
+                });
+
+            modelBuilder.Entity("Library_DB.BookLoan", b =>
+                {
+                    b.HasOne("Library_DB.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Library_DB.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("Library_DB.Author", b =>

@@ -1,5 +1,7 @@
 using System.Reflection;
+using Domain.Interfaces;
 using Library_DB;
+using Library_DB.Books;
 using Library_EF.Components;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
@@ -24,17 +26,14 @@ builder.Services.AddDbContext<LibraryContext>(options =>
     });
 });
 
+//register Repositories
+builder.Services.AddTransient<IRepository<Book>,ARepository<Book>>();
+builder.Services.AddTransient<IRepository<Author>, ARepository<Author>>();
+builder.Services.AddTransient<IRepository<BookDetails>, ARepository<BookDetails>>();
+
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();

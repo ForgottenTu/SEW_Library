@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Library_DB;
+namespace Library_DB.Books;
 
 public class BookLoan
 {

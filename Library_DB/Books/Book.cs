@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Library_DB;
+namespace Library_DB.Books;
 
-public abstract class Book
+public class Book
 {
     [Key]
     public int Id { get; set; }

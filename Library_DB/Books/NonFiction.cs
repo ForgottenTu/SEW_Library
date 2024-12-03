@@ -1,4 +1,4 @@
-﻿namespace Library_DB;
+﻿namespace Library_DB.Books;
 
 public class NonFiction : Book
 {
