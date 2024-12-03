@@ -26,11 +26,12 @@ public class LibraryContext:DbContext
     {
         model.Entity<Book>().HasDiscriminator<string>("BookType")
             .HasValue<Novel>("Novel")
-            .HasValue<SciFi>("SciFi")
+            .HasValue<SciFi>("ScienceFiction")
             .HasValue<Textbook>("Textbook")
             .HasValue<Mystery>("Mystery")
             .HasValue<NonFiction>("NonFiction")
-            .HasValue<Fantasy>("Fantasy");
+            .HasValue<Fantasy>("Fantasy")
+            .HasValue<Biography>("Biography");
         
         model.Entity<Person>().ToTable("Persons");
         model.Entity<Author>().ToTable("Authors");

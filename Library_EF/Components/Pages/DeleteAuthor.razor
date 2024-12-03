@@ -1,0 +1,41 @@
+﻿@page "/DeleteAuthor"
+@using Domain.Interfaces
+@using Library_DB
+@inject IRepository<Author> AuthorRepo
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+<h3>DeleteAuthor</h3>
+
+
+<h3>All Authors</h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Biography</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var author in AuthorRepo.ReadAll())
+    {
+        <tr>
+            <td>@author.FirstName</td>
+            <td>@author.LastName</td>
+            <td>@author.DateOfBirth.ToShortDateString()</td>
+            <td>@author.Biography</td>
+            <td>
+                <button class="btn btn-danger btn-sm" @onclick="() => AuthorRepo.Delete(author)">Delete</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@code {
+
+}

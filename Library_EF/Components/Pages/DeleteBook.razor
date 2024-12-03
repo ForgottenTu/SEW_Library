@@ -1,0 +1,48 @@
+﻿@page "/DeleteBook"
+@using Domain.Interfaces
+@using Library_DB
+@using Library_DB.Books
+@inject IRepository<Book> BookRepo
+@inject IRepository<Author> AuthorRepo
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+<h3>Delete Book</h3>
+
+<h3>All Books</h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Type</th>
+        <th>Published Date</th>
+        <th>ISBN</th>
+        <th>Available Copies</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in BookRepo.ReadAll())
+    {
+        <tr>
+            <td>@book.Id</td>
+            <td>@book.Title</td>
+            <td>@($"{AuthorRepo.Read(book.AuthorId)!.FirstName} {AuthorRepo.Read(book.AuthorId)!.LastName}")</td>
+            <td>@book.GetType().Name</td>
+            <td>@book.PublishedDate.ToShortDateString()</td>
+            <td>@book.ISBN</td>
+            <td>@book.AvailableCopies</td>
+            <td>
+                <button class="btn btn-danger btn-sm" @onclick="() => BookRepo.Delete(book)">Delete</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@code {
+
+}
