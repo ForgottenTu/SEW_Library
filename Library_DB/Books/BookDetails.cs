@@ -6,5 +6,6 @@ public class BookDetails
     public int TotalCopies { get; set; }
     public int AvailableCopies { get; set; }
     public int BorrowedCopies { get; set; }
-    public AItem AItemId { get; set; }
+    
+    
 }

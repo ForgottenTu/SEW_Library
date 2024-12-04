@@ -1,6 +1,6 @@
 ﻿namespace Library_DB;
 
-public class Mystery : AItem
+public class Mystery : Book
 {
     
 }
