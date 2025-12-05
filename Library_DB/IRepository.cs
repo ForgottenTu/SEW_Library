@@ -4,22 +4,21 @@ namespace Domain.Interfaces;
 
 public interface IRepository<TEntity> where TEntity : class
 {
-    TEntity Create(TEntity t);
+    Task<TEntity> CreateAsync(TEntity t);
 
-    List<TEntity> CreateRange(List<TEntity> list);
+    Task<List<TEntity>> CreateRangeAsync(List<TEntity> list);
 
+    Task UpdateAsync(TEntity t);
 
-    void Update(TEntity t);
+    Task UpdateRangeAsync(List<TEntity> list);
 
-    void UpdateRange(List<TEntity> list);
+    Task<TEntity?> ReadAsync(int id);
 
-    TEntity? Read(int id);
+    Task<List<TEntity>> ReadAsync(Expression<Func<TEntity, bool>> filter);
 
-    List<TEntity> Read(Expression<Func<TEntity, bool>> filter);
+    Task<List<TEntity>> ReadAsync(int start, int count);
 
-    List<TEntity> Read(int start, int count);
+    Task<List<TEntity>> ReadAllAsync();
 
-    List<TEntity> ReadAll();
-
-    void Delete(TEntity t);
+    Task DeleteAsync(TEntity t);
 }

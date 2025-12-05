@@ -4,61 +4,58 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library_DB;
 
-public class ARepository<TEntity>: IRepository<TEntity> where TEntity : class
+public class ARepository<TEntity> : IRepository<TEntity> where TEntity : class
 {
-    private LibraryContext _context;
-    private DbSet<TEntity> table;
-    
+    private readonly LibraryContext _context;
+    private readonly DbSet<TEntity> table;
+
     public ARepository(LibraryContext context)
     {
         _context = context;
         table = _context.Set<TEntity>();
     }
-    public TEntity Create(TEntity t)
+
+    public async Task<TEntity> CreateAsync(TEntity t)
     {
-        table.Add(t);
-        _context.SaveChanges();
+        await table.AddAsync(t);
+        await _context.SaveChangesAsync();
         return t;
     }
 
-    public List<TEntity> CreateRange(List<TEntity> list)
+    public async Task<List<TEntity>> CreateRangeAsync(List<TEntity> list)
     {
-        table.AddRange(list);
-        _context.SaveChanges();
+        await table.AddRangeAsync(list);
+        await _context.SaveChangesAsync();
         return list;
     }
 
-    public void Update(TEntity t)
+    public async Task UpdateAsync(TEntity t)
     {
         _context.ChangeTracker.Clear();
-        
         table.Update(t);
-        _context.SaveChanges();
-        
+        await _context.SaveChangesAsync();
     }
 
-    public void UpdateRange(List<TEntity> list)
+    public async Task UpdateRangeAsync(List<TEntity> list)
     {
         _context.ChangeTracker.Clear();
-        
         table.UpdateRange(list);
+        await _context.SaveChangesAsync();
     }
 
-    public TEntity? Read(int id) => table.Find(id);
- 
+    public async Task<TEntity?> ReadAsync(int id) => await table.FindAsync(id);
 
-    public List<TEntity> Read(Expression<Func<TEntity, bool>> filter) => table.Where(filter).ToList();
-    
+    public async Task<List<TEntity>> ReadAsync(Expression<Func<TEntity, bool>> filter) => 
+        await table.Where(filter).ToListAsync();
 
-    public List<TEntity> Read(int start, int count) => table.Skip(start).Take(count).ToList();
-    
+    public async Task<List<TEntity>> ReadAsync(int start, int count) => 
+        await table.Skip(start).Take(count).ToListAsync();
 
-    public List<TEntity> ReadAll() => table.ToList();
-    
+    public async Task<List<TEntity>> ReadAllAsync() => await table.ToListAsync();
 
-    public void Delete(TEntity t)
+    public async Task DeleteAsync(TEntity t)
     {
         table.Remove(t);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
     }
 }
